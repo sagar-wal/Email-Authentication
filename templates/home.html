@@ -3,7 +3,7 @@
 {% block content %}
 
 <h1 style="font-size: xx-large;" align='center'>Enter your details</h1>
-<div align=center style="font-weight: bolder;">
+<!--div align=center style="font-weight: bolder;">
 <form action="email" method="POST">
 
     {% csrf_token %}
@@ -21,10 +21,10 @@
 
 </form>
 
-</div>
+</div-->
 
-
-
+<a href="{% url 'signup' %}">Sign Up</a>
+<a href="{% url 'signin' %}">Sign In</a>
 
 
 {% endblock %}

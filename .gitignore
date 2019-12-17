@@ -1,0 +1,7 @@
+#Excluding database
+
+*.sqlite3
+
+#Excluding vscode 
+
+.vscode

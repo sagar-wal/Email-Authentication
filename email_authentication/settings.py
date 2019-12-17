@@ -63,12 +63,19 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-            ],
+            ],``
         },
     },
 ]
 
 WSGI_APPLICATION = 'email_authentication.wsgi.application'
+
+#EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'email@example.com'
+EMAIL_HOST_PASSWORD = 'password'
+EMAIL_PORT = 587
 
 
 # Database
@@ -81,6 +88,9 @@ DATABASES = {
     }
 }
 
+#AUTHENTICATION_BACKENDS = (
+ #   ('django.contrib.auth.backends.ModelBackend'),
+#)
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
