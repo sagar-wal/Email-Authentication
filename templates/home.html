@@ -2,29 +2,12 @@
 
 {% block content %}
 
-<h1 style="font-size: xx-large;" align='center'>Enter your details</h1>
-<!--div align=center style="font-weight: bolder;">
-<form action="email" method="POST">
+<h1 style="font-size: xx-large; font-weight:bolder" align='center'>Welcome to Email Authenticator</h1><br><br><br> 
 
-    {% csrf_token %}
-    
-    <h5>Name</h5>
-    <input type="text" name="name" placeholder="Enter Name" id="01" >
-    <h5>Email</h5>
-    <input type="email" name="email" placeholder="Enter Email Address" id="02" cols="30" rows="10">
-    <h5>Password</h5>
-    <input type="password" name="password1" placeholder="Enter Password" id="03" cols="30" rows="10">
-    <h5>Confirm Password</h5>
-    <input type="password" name="password2" placeholder="Confirm Password" id="04" cols="30" rows="10"><br><br>
-    <input type="submit" class="btn btn-primary button" style="width: 25%; margin-left:0.5%; padding:0.75%" >
+<div align='center'>
+<a href="{% url 'signup' %}" class="btn btn-primary button" >Sign Up</a> <br><br>
+<a href="{% url 'login' %}" class="btn btn-primary button">Sign In</a>
+</div>
 
+{% endblock content %}
 
-</form>
-
-</div-->
-
-<a href="{% url 'signup' %}">Sign Up</a>
-<a href="{% url 'signin' %}">Sign In</a>
-
-
-{% endblock %}

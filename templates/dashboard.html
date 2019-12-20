@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1 style="text-align: center; font-weight:bolder">Dashboard</h1>
+<br><br>
+
+{% if user.is_authenticated %}
+<h3 style="text-align: center; font-weight:bold">User Details</h3><br>
+<p style="text-align: center; font-weight:700; font-size:large">Username :<span>{{user.username}}</span> </p>
+<p style="text-align: center; font-weight:700; font-size:large">Email :<span>{{user.email}}</span> </p><br>
+<div align='center'>
+<a href="{% url 'view' %}" class="btn btn-primary button">View All Users</a><br><br>
+<a href="{% url 'logout' name=user.username email=user.email %}" style="align-content: center;" class="btn btn-primary button">Logout</a> 
+</div>
+{% else %}  
+<h3 style="text-align: center; font-weight:bold">You are not logged in. Please login below</h3><br>
+<div align='center'>
+<a href="{% url 'login' %}" class="btn btn-primary button"  >Login</a><br><br>
+</div>
+<p style="text-align: center; font-weight:bold; font-size:large">New User ? Register <a href="{% url 'signup' %}" style="color:green;"> <u> here </u></a></p>
+{% endif %}
+
+
+{% endblock %}

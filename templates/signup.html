@@ -1,21 +1,31 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div style="margin-left: 10px;">
   <h2>Sign up</h2>
   <form method="post">
     {% csrf_token %}
       {% for field in form %}
-      <p>
+      <div class="form-group">
         {{ field.label_tag }}<br>
         {{ field }}
+      </div>
         {% if field.help_text %}
           <small style="display: none">{{ field.help_text }}</small>
         {% endif %}
         {% for error in field.errors %}
-          <p style="color: red">{{ error }}</p>
+          <p style="color: red; font-weight:bold" >{{ error }}</p>
         {% endfor %}
-      </p>
+      
       {% endfor %}
     <button type="submit">Sign up</button>
   </form>
+<br>
+<p style=" font-weight:bold; font-size:large">Already have an account ? Login <a href="{% url 'login' %}" style="color:green;"> <u> here </u></a></p>
+
+</div>
 {% endblock %}
+
+
+
+  
