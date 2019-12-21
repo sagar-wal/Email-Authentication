@@ -41,27 +41,17 @@ It is an email authenticator i.e. it sends a one-time link to user's email for v
   $ pip install -r requirements.txt
   ```
 
-  Here is what your Pipfile will appear when you're ready to go ( you can view it by running $ pip freeze ).
-  Please note there may be less packages in your list when you run $ pip freeze. The main required packages have been marked bold in the list. 
+  Here is what your Pipfile will appear when you're ready to go ( you can view it by running $ pip freeze ). 
 
-**Django==3.0**<br>
-**python-dotenv==0.10.3**<br>
-**six==1.13.0**<br>
-asgiref==3.2.3<br>
-certifi==2019.11.28<br>
-chardet==3.0.4<br>
-docopt==0.6.2<br>
-gunicorn==20.0.4<br>
-idna==2.8<br>
-pipreqs==0.4.10<br>
-pkg-resources==0.0.0<br>
-psycopg2==2.8.4<br>
-pytz==2019.3<br>
-requests==2.22.0<br>
-sqlparse==0.3.0<br>
-urllib3==1.25.7<br>
-whitenoise==4.1.2<br>
-yarg==0.1.9
+```bash
+Django==3.0
+six==1.13.0
+python-dotenv==0.10.3
+asgiref==3.2.3
+pkg-resources==0.0.0
+pytz==2019.3
+sqlparse==0.3.0
+```
 
   Once the requirements are met, do the following :
   
