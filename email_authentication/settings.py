@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'ghw@2-v$x5aaf2&_(p(tox&$t*_ous73+p=9ein(xcp!it%npu'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost','127.0.0.1']
 
 
 # Application definition
@@ -56,7 +56,6 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [os.path.join(BASE_DIR,'templates')],
-        #'DIRS': [os.path.join(BASE_DIR,'registration')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -71,11 +70,13 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'email_authentication.wsgi.application'
 
-#EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'youremail@example.com'
-EMAIL_HOST_PASSWORD = 'yourpassword'
+EMAIL_HOST_USER = 'agarwalsagar7202@gmail.com'
+EMAIL_HOST_PASSWORD ='gmail_FaN@6128'
 EMAIL_PORT = 587
 
 

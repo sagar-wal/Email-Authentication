@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div style="margin-left: 10px;">
-  <h2>Sign up</h2>
+<div align='center'>
+  <h2 style="font-weight: bolder;">Sign up</h2><br>
   <form method="post">
     {% csrf_token %}
       {% for field in form %}
@@ -14,7 +14,7 @@
           <small style="display: none">{{ field.help_text }}</small>
         {% endif %}
         {% for error in field.errors %}
-          <p style="color: red; font-weight:bold" >{{ error }}</p>
+          <p style="color:darkred; font-weight:bold" >{{ error }}</p>
         {% endfor %}
       
       {% endfor %}

@@ -58,11 +58,6 @@ def activate(request, uidb64, token):
         return HttpResponse('Activation link is invalid!')
 
 def dashboard(request):
-    #user = {}
-    #user["username"] = request.GET['username']
-    #user["email"] = request.GET['email']
-    #print(user)
-    #print(type(user))
     return render(request,'dashboard.html')
 
 def user_logout(request,name,email):
@@ -73,27 +68,3 @@ def user_logout(request,name,email):
 def view(request):
     obj=User.objects.filter(is_active=True)
     return render(request,'view.html',{'object':obj ,'length':len(obj)})
-
-    
-"""
-class LoginView(generic.FormView):
-    form_class = LoginForm
-    #success_url = reverse_lazy('home')
-    template_name = 'registration/login.html'
-
-    def form_valid(self, form):
-        username = form.cleaned_data['username']
-        password = form.cleaned_data['password']
-        user = authenticate(username=username, password=password)
-
-        if user is not None and user.is_active:
-            login(self.request, user)
-            print('logged in')
-            #return super(LoginView, self).form_valid(form)
-            return HttpResponse('hello you are logged in ')
-        else:
-            print('not li')
-            #return self.form_invalid(form)
-            return HttpResponse('hello you are not logged in ')
-            """
-            
