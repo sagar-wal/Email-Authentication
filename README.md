@@ -75,7 +75,7 @@ yarg==0.1.9
    ```bash
    $ touch .env 
    ```
- * Add the file to gitignore
+ * Make sure to create one .gitignore file and add '.env' to it if you later plan to push this repository to the origin remote.
  
    ```bash
    $ echo .env >> .gitignore
