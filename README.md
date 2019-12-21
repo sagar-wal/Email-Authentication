@@ -53,20 +53,14 @@ pytz==2019.3
 sqlparse==0.3.0
 ```
 
-  Once the requirements are met, do the following :
+  **Once the requirements are met, do the following :**
   
- * Initialise the database
-   
-   ```bash
-   $ python manage.py makemigrations
-   $ python manage.py migrate
-   ```
- * Create a file to store environment variables 
+  * Create a file to store environment variables 
  
    ```bash
    $ touch .env 
    ```
- * Make sure to and add '.env' to the .gitignore file if you later plan to push this repository to the origin remote.
+ * Make sure to add '.env' to the .gitignore file if you later plan to push this repository to the origin remote.
  
    ```bash
    $ echo .env >> .gitignore
@@ -84,6 +78,14 @@ sqlparse==0.3.0
    ```bash
    $ echo 'SECRET_KEY="thesecretkeycopiedtoclipboard"' >> .env 
    ```
+  
+ * Initialise the database
+   
+   ```bash
+   $ python manage.py makemigrations
+   $ python manage.py migrate
+   ```
+ 
  * You now need to add your email address and password from which the confirmation email will be sent. Please be careful with this step as this is the most important step. Make sure correct email-address and password is given. 
  
    ```bash
