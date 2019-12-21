@@ -17,7 +17,7 @@ It is an email authenticator i.e. it sends a one-time link to user's email for v
   $ sudo apt-get install python3-venv
   ```
  
-* Navigate to the cloned repository directory and initiate a python 3 environment.
+* Initiate a python 3 environment.
   
   ```bash
   $ python3 -m venv env 
@@ -27,13 +27,14 @@ It is an email authenticator i.e. it sends a one-time link to user's email for v
   ```bash
   $ source env/bin/activate
   ```
+  
   After successful activation, the code within parentheses will appear before the prompt in the bash similar to this:
   ```bash
   (env) <directory>$ 
   ``` 
   You can watch this video on how to install venv : <a href="https://www.youtube.com/watch?v=mqlCk_WCK2E">https://www.youtube.com/watch?v=mqlCk_WCK2E</a>
   
-* Now install all requisites given in requirements.txt .
+* Now navigate into the cloned repository and install all requisites given in requirements.txt .
 
   ```bash
   $ cd Email-Authentication
