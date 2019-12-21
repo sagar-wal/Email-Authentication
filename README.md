@@ -33,7 +33,7 @@ It is an email authenticator i.e. it sends a one-time link to user's email for v
   ``` 
   You can watch this video on how to install venv : <a href="https://www.youtube.com/watch?v=mqlCk_WCK2E">https://www.youtube.com/watch?v=mqlCk_WCK2E</a>
   
-* Now install all requisites in requirements.txt .
+* Now install all requisites given in requirements.txt .
 
   ```bash
   $ cd Email-Authentication
