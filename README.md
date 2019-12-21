@@ -31,6 +31,8 @@ It is an email authenticator i.e. it sends a one-time link to user's email for v
   ```bash
   (env) <directory>$ 
   ``` 
+  You can watch this video on how to install venv : <a href="https://www.youtube.com/watch?v=mqlCk_WCK2E">https://www.youtube.com/watch?v=mqlCk_WCK2E</a>
+  
 * Now install all requisites in requirements.txt .
 
   ```bash
