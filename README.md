@@ -53,19 +53,13 @@ pytz==2019.3
 sqlparse==0.3.0
 ```
 
-  **Once the requirements are met, do the following :**
+  **Once the requirements are met, then come the most important steps :**
   
-  * Create a file to store environment variables 
+  * Create a file to store environment variables. Since this file will contain sensitive information, it has been added to '.gitignore' 
  
    ```bash
    $ touch .env 
-   ```
- * Make sure to add '.env' to the .gitignore file if you later plan to push this repository to the origin remote.
- 
-   ```bash
-   $ echo .env >> .gitignore
-   ```
-   **Now come the most important steps**
+   ``` 
    
  * Generate a secret key for the project
    
