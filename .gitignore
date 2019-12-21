@@ -5,3 +5,7 @@
 #Excluding vscode 
 
 .vscode
+
+#Excluding environment variables
+
+.env
