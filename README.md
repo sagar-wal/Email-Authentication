@@ -66,7 +66,7 @@ sqlparse==0.3.0
    ```bash
    $ touch .env 
    ```
- * Make sure to create one .gitignore file and add '.env' to it if you later plan to push this repository to the origin remote.
+ * Make sure to and add '.env' to the .gitignore file if you later plan to push this repository to the origin remote.
  
    ```bash
    $ echo .env >> .gitignore
