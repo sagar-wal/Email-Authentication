@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<head>
+        <style>
+    
+                table,th,td{
+                    font-family: sans-serif;
+                    border: 1px solid black;
+                    border-collapse: collapse;
+                    padding: 3%;
+                    text-align: center;
+                } 
+            </style>
+</head>
+
+<script> var c=0  </script>
+
+{% if user.is_authenticated %}
+
+<h1 style="text-align: center; font-weight:bolder ">All Users</h1>
+
+<p style="text-align: center; font-weight:bold" >Authenticated Users created till now : <span> {{length}} </span></p>
+<div align='center' >
+<table style="width:60%;">
+        <tr >
+            <th >User No.</th>
+            <th>Username</th>
+            <th >Email</th>
+        </tr>
+{% for i in object %}
+{% if i.is_active %}
+  <tr>
+            <td><script>document.write(++c)</script></td>
+            <td> {{i.username}} </td>
+            <td> {{i.email}} </td>
+        </tr>
+    
+{% endif %}
+{% endfor %}
+</table></div>
+{% else %}
+<br><br>
+<h3 style="text-align: center; font-weight:bold">You need to be logged in to view this page. Please Login below.</h3><br>
+<div align='center'>
+<a href="{% url 'login' %}" class="btn btn-primary button"  >Login</a><br><br>
+</div>
+<p style="text-align: center; font-weight:bold; font-size:large">New User ? Register <a href="{% url 'signup' %}" style="color:green;"> <u> here </u></a></p>
+
+{% endif %}
+
+<br><br><br><br>
+{% endblock %}

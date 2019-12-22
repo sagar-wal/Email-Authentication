@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}
+{% endblock %}
+{% block content %}
+<div style="background-color: antiquewhite;">
+    <br><br>
+<h3  style="font-size: xx-large; text-align:center">Congratulations! You have been successfully logged in !</h3><br><br>
+<h5  style="font-size:x-large; text-align:center">Redirecting to dashboard...</h5>
+<script>
+    function redirectPage() {
+        window.location.href = window.location.origin + "/dashboard";    
+    }
+    setTimeout(redirectPage, 3000)
+</script>
+
+{% endblock %}
+</div>

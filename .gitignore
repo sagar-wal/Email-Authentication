@@ -1,0 +1,11 @@
+#Excluding database
+
+*.sqlite3
+
+#Excluding vscode 
+
+.vscode
+
+#Excluding environment variables
+
+.env
